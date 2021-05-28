@@ -3,6 +3,17 @@ import axios from "axios";
 import "../css/signup_style.css"
 import {useHistory} from "react-router-dom";
 
+async function WorkSignUp() {
+
+    axios.post('http://localhost:5000/sign_up', {})
+        .then(resp => {
+            if (resp.data.u === ''||resp.data.e === '' === ''||resp.data.p1 === ''||resp.data.p2) {
+                return 'Error'
+            }
+            return 'Success'
+        });
+
+}
 function RenderSignup(){
     const history = useHistory();
     function Work(event) {
@@ -59,5 +70,8 @@ return(
         </div>
     </div>
 )
+}
+export {
+    WorkSignUp
 }
 export default RenderSignup;

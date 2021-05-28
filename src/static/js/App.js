@@ -1,8 +1,7 @@
-import './App.css';
-import RenderLogin from "./static/js/login";
-import RenderSignup from "./static/js/signup";
-import RenderMenu from "./static/js/menu";
-import RenderUser from "./static/js/user";
+import RenderLogin from "./login";
+import RenderSignup from "./signup";
+import RenderMenu from "./menu";
+import RenderUser from "./user";
 import {Component} from "react";
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 

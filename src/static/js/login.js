@@ -2,9 +2,19 @@ import React from "react";
 import axios from "axios";
 import "../css/login_style.css"
 import {ReactSession} from 'react-client-session';
-import {useHistory,Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 ReactSession.setStoreType("localStorage");
+
+async function Work()
+{
+    return  axios.post('/login',{}).
+    then(resp => {
+        if(resp.data.username==="1" && resp.data.password==='1')
+            return "Success";
+        return "Error"
+    });
+}
 function RenderLogin(){
     const history = useHistory();
     function Work(event) {
@@ -48,11 +58,13 @@ return(
                 <input type="submit" value="Login"/>
                 <div className="signup">
                     Not a member?
-                    <Link to='/signup'> SignUp</Link>
                 </div>
             </form>
         </div>
     </div>
 )
+}
+export{
+    Work
 }
 export default RenderLogin;
