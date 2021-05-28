@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+ PASS  src/App.test.js
+  App
+    √ alive (17 ms)
+  Login
+    √ success axios (4 ms)
+    √ error axios
+    √ renders (12 ms)
+  SignUp
+    √ renders (5 ms)
+    √ success axios
+    √ error axios
+  Menu
+    √ renders (2 ms)
+    √ gets events (1 ms)
+
+---------------------|---------|----------|---------|---------|-------------------
+File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------------|---------|----------|---------|---------|-------------------
+All files            |      15 |    26.67 |   30.77 |   15.15 |                  
+ src                 |       0 |        0 |       0 |       0 |                  
+  index.js           |       0 |      100 |     100 |       0 | 7-17             
+  reportWebVitals.js |       0 |        0 |       0 |       0 | 1-8              
+ src/static/js       |   16.67 |    30.77 |   33.33 |   16.85 |                  
+  App.js             |     100 |      100 |     100 |     100 |                  
+  login.js           |    37.5 |    33.33 |      60 |    37.5 | 14,21-37         
+  menu.js            |    9.09 |     12.5 |    12.5 |    9.38 | 12,53-131        
+  signup.js          |   33.33 |     62.5 |      60 |   33.33 | 13,20-38         
+  user.js            |       0 |        0 |       0 |       0 | 8-87             
+---------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        3.682 s
+Ran all test suites.
+
